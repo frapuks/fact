@@ -155,7 +155,7 @@ CREATE FUNCTION sales_by_dates(date_from DATE, date_to DATE) RETURNS SETOF sales
 		RETURN QUERY (
 			SELECT currentDate::DATE, COUNT(invoice_recap.id)::integer AS nb_invoices, SUM(invoice_recap.total)
 			FROM generate_series(date_from::DATE, date_to::DATE, '1day') AS currentDate
-			JOIN invoice_recap ON currentDate = issued_at::date
+			FULL JOIN invoice_recap ON currentDate = issued_at::date
 			GROUP BY currentDate
 		);
 	END
