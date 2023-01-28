@@ -1,0 +1,12 @@
+%syntax-version=1.0.0
+%project=ofact
+
+1.init 2023-01-27T21:07:52Z franc <franc@Frapuks> # Création des tables
+2.3fn 2023-01-27T21:07:53Z franc <franc@Frapuks> # Adaptation à la 3e forme normale
+3.crud_functions 2023-01-27T21:07:53Z franc <franc@Frapuks> # Création des fonction CRUD
+4.update_function_invoice 2023-01-28T09:44:10Z franc <franc@Frapuks> # ajout du coalesce sur la date de paiement
+5.invoice_details 2023-01-28T10:10:02Z franc <franc@Frapuks> # Création de la view pour les factures
+6.invoice_recap 2023-01-28T11:00:21Z franc <franc@Frapuks> # Création de la view pour les factures avec des sous requêtes
+7.sales 2023-01-28T12:09:27Z franc <franc@Frapuks> # Création d'une fonction pour les stats de ventes
+8.packed_invoice 2023-01-28T14:48:06Z franc <franc@Frapuks> # Création d'une fonction pour le contenu d'une commande
+9.add_invoice 2023-01-28T15:22:24Z franc <franc@Frapuks> # Création d'une fonction ajouter une facture

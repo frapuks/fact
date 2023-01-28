@@ -1,0 +1,2 @@
+DROP DATABASE ofact;
+CREATE DATABASE ofact;

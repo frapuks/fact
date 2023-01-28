@@ -1,0 +1,29 @@
+MCD
+
+visitor: id, email, password, name, address, zip_code, city
+pay, 0N visitor, 11 invoice: paid_at
+invoice: id, issued_at
+
+::
+has, 1N invoice, 11 invoice_line
+
+product: id, label, price, price_with_taxes
+concerns, 0N product, 11 invoice_line
+invoice_line: id, quantity
+
+
+
+
+MLD
+
+:
+visitor: id, email, password, name, address, zip_code, city
+:
+invoice: id, #visitor_id->visitor->id, issued_at, paid_at
+:
+
+:
+product: id, label, price, price_with_taxes
+:
+invoice_line: id, quantity, #invoice_id->invoice->id, #product_id->product->id
+:
